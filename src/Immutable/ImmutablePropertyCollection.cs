@@ -58,4 +58,6 @@ public class ImmutablePropertyCollection : IImmutablePropertyCollection
         var objects = _objects.Remove(propertiesType);
         return new ImmutablePropertyCollection(objects);
     }
+
+    public static IImmutablePropertyCollection Empty { get; } = new ImmutablePropertyCollection();
 }
