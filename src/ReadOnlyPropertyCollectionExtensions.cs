@@ -11,6 +11,11 @@ public static class ReadOnlyPropertyCollectionExtensions
 
     public static IImmutablePropertyCollection ToImmutable(this IReadOnlyPropertyCollection propertyCollection)
     {
+        if (propertyCollection is IImmutablePropertyCollection immutablePropertyCollection)
+        {
+            return immutablePropertyCollection;
+        }
+
         return new ImmutablePropertyCollection(propertyCollection.Objects);
     }
 }
