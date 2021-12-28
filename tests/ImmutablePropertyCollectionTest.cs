@@ -41,6 +41,15 @@ public class ImmutablePropertyCollectionTest
     }
 
     [Fact]
+    public void ShouldReturnSameInstanceIfPropertyCollectionIsAlreadyImmutable()
+    {
+        IReadOnlyPropertyCollection propertyCollection = ImmutablePropertyCollection.Empty;
+        var immutablePropertyCollection = propertyCollection.ToImmutable();
+
+        Assert.Same(propertyCollection, immutablePropertyCollection);
+    }
+
+    [Fact]
     public void ShouldReturnSameCollectionIfNotChangedAfterSet()
     {
         var properties = new TestProperties();
