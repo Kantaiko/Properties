@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/saintedlama/versionize) for commit guidelines.
 
+<a name="0.3.0"></a>
+## [0.3.0](https://www.github.com/Kantaiko/Properties/releases/tag/v0.3.0) (2021-12-31)
+
+### Features
+
+* Add Update extension method to ImmutablePropertyCollection ([1a35754](https://www.github.com/Kantaiko/Properties/commit/1a35754d34c599ec4bf93c601c95be3b7a550b22))
+
 <a name="0.2.0"></a>
 ## [0.2.0](https://www.github.com/Kantaiko/Properties/releases/tag/v0.2.0) (2021-12-28)
 
