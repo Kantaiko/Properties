@@ -77,4 +77,18 @@ public class ImmutablePropertyCollectionTest
         var properties = propertyCollection.Get<TestProperties>();
         Assert.Equal(default, properties);
     }
+
+    [Fact]
+    public void ShouldUpdatePropertiesInImmutablePropertyCollection()
+    {
+        IImmutablePropertyCollection propertyCollection = new ImmutablePropertyCollection();
+
+        propertyCollection = propertyCollection.Update<TestReadOnlyProperties>(props => props with
+        {
+            A = props.A + 42
+        });
+
+        var properties = propertyCollection.Get<TestReadOnlyProperties>();
+        Assert.Equal(42, properties?.A);
+    }
 }
