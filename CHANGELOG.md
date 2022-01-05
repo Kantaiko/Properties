@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/saintedlama/versionize) for commit guidelines.
 
+<a name="0.4.0"></a>
+## [0.4.0](https://www.github.com/Kantaiko/Properties/releases/tag/v0.4.0) (2022-1-5)
+
+### Features
+
+* Add IImmutablePropertyContainer interface ([52d82ba](https://www.github.com/Kantaiko/Properties/commit/52d82baf085fe28858991bc6bc46aca0a3229523))
+
 <a name="0.3.0"></a>
 ## [0.3.0](https://www.github.com/Kantaiko/Properties/releases/tag/v0.3.0) (2021-12-31)
 
