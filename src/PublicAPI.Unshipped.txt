@@ -1,0 +1,52 @@
+Kantaiko.Properties.Immutable.IImmutablePropertyCollection
+Kantaiko.Properties.Immutable.IImmutablePropertyCollection.Remove(System.Type! propertiesType) -> Kantaiko.Properties.Immutable.IImmutablePropertyCollection!
+Kantaiko.Properties.Immutable.IImmutablePropertyCollection.Set<T>(T value) -> Kantaiko.Properties.Immutable.IImmutablePropertyCollection!
+Kantaiko.Properties.Immutable.IImmutablePropertyContainer
+Kantaiko.Properties.Immutable.IImmutablePropertyContainer.Properties.get -> Kantaiko.Properties.Immutable.IImmutablePropertyCollection!
+Kantaiko.Properties.Immutable.ImmutablePropertyCollection
+Kantaiko.Properties.Immutable.ImmutablePropertyCollection.ImmutablePropertyCollection() -> void
+Kantaiko.Properties.Immutable.ImmutablePropertyCollection.ImmutablePropertyCollection(System.Collections.Generic.IEnumerable<object!>! objects) -> void
+Kantaiko.Properties.Immutable.ImmutablePropertyCollection.Objects.get -> System.Collections.Generic.IEnumerable<object!>!
+Kantaiko.Properties.Immutable.ImmutablePropertyCollection.Remove(System.Type! propertiesType) -> Kantaiko.Properties.Immutable.IImmutablePropertyCollection!
+Kantaiko.Properties.Immutable.ImmutablePropertyCollection.Set<T>(T value) -> Kantaiko.Properties.Immutable.IImmutablePropertyCollection!
+Kantaiko.Properties.Immutable.ImmutablePropertyCollection.TryGet<T>(out T? properties) -> bool
+Kantaiko.Properties.Immutable.ImmutablePropertyCollectionExtensions
+Kantaiko.Properties.IPropertyCollection
+Kantaiko.Properties.IPropertyCollection.Clear() -> void
+Kantaiko.Properties.IPropertyCollection.GetOrCreate<T>() -> T
+Kantaiko.Properties.IPropertyCollection.Remove(System.Type! type) -> bool
+Kantaiko.Properties.IPropertyCollection.Set<T>(T value) -> void
+Kantaiko.Properties.IPropertyContainer
+Kantaiko.Properties.IPropertyContainer.Properties.get -> Kantaiko.Properties.IPropertyCollection!
+Kantaiko.Properties.IReadOnlyPropertyCollection
+Kantaiko.Properties.IReadOnlyPropertyCollection.Objects.get -> System.Collections.Generic.IEnumerable<object!>!
+Kantaiko.Properties.IReadOnlyPropertyCollection.TryGet<T>(out T? properties) -> bool
+Kantaiko.Properties.IReadOnlyPropertyContainer
+Kantaiko.Properties.IReadOnlyPropertyContainer.Properties.get -> Kantaiko.Properties.IReadOnlyPropertyCollection!
+Kantaiko.Properties.PropertyClass<T>
+Kantaiko.Properties.PropertyClass<T>.PropertyClass() -> void
+Kantaiko.Properties.PropertyCollection
+Kantaiko.Properties.PropertyCollection.Clear() -> void
+Kantaiko.Properties.PropertyCollection.GetOrCreate<T>() -> T
+Kantaiko.Properties.PropertyCollection.Objects.get -> System.Collections.Generic.IEnumerable<object!>!
+Kantaiko.Properties.PropertyCollection.PropertyCollection() -> void
+Kantaiko.Properties.PropertyCollection.PropertyCollection(System.Collections.Generic.IEnumerable<object!>! objects) -> void
+Kantaiko.Properties.PropertyCollection.Remove(System.Type! type) -> bool
+Kantaiko.Properties.PropertyCollection.Set<T>(T value) -> void
+Kantaiko.Properties.PropertyCollection.TryGet<T>(out T? properties) -> bool
+Kantaiko.Properties.PropertyCollectionExtensions
+Kantaiko.Properties.PropertyContainerExtensions
+Kantaiko.Properties.PropertyRecord<T>
+Kantaiko.Properties.ReadOnlyPropertyCollectionExtensions
+static Kantaiko.Properties.Immutable.ImmutablePropertyCollection.Empty.get -> Kantaiko.Properties.Immutable.IImmutablePropertyCollection!
+static Kantaiko.Properties.Immutable.ImmutablePropertyCollectionExtensions.Remove<T>(this Kantaiko.Properties.Immutable.IImmutablePropertyCollection! propertyCollection) -> Kantaiko.Properties.Immutable.IImmutablePropertyCollection!
+static Kantaiko.Properties.Immutable.ImmutablePropertyCollectionExtensions.Update<T>(this Kantaiko.Properties.Immutable.IImmutablePropertyCollection! propertyCollection, System.Func<T, T>! updateDelegate) -> Kantaiko.Properties.Immutable.IImmutablePropertyCollection!
+static Kantaiko.Properties.PropertyClass<T>.Of(Kantaiko.Properties.IReadOnlyPropertyContainer! propertyContainer) -> T?
+static Kantaiko.Properties.PropertyCollectionExtensions.Configure<T>(this Kantaiko.Properties.IPropertyCollection! propertyCollection, System.Action<T>! configureDelegate) -> void
+static Kantaiko.Properties.PropertyCollectionExtensions.Remove<T>(this Kantaiko.Properties.IPropertyCollection! propertyCollection) -> bool
+static Kantaiko.Properties.PropertyCollectionExtensions.Update<T>(this Kantaiko.Properties.IPropertyCollection! propertyCollection, System.Func<T, T>! updateDelegate) -> void
+static Kantaiko.Properties.PropertyContainerExtensions.Configure<T>(this Kantaiko.Properties.IPropertyContainer! propertyContainer, System.Action<T>! configureDelegate) -> void
+static Kantaiko.Properties.PropertyContainerExtensions.Update<T>(this Kantaiko.Properties.IPropertyContainer! propertyContainer, System.Func<T, T>! updateDelegate) -> void
+static Kantaiko.Properties.PropertyRecord<T>.Of(Kantaiko.Properties.IReadOnlyPropertyContainer! propertyContainer) -> T?
+static Kantaiko.Properties.ReadOnlyPropertyCollectionExtensions.Get<T>(this Kantaiko.Properties.IReadOnlyPropertyCollection! propertyCollection) -> T?
+static Kantaiko.Properties.ReadOnlyPropertyCollectionExtensions.ToImmutable(this Kantaiko.Properties.IReadOnlyPropertyCollection! propertyCollection) -> Kantaiko.Properties.Immutable.IImmutablePropertyCollection!

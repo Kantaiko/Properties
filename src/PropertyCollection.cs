@@ -2,15 +2,28 @@ using System.Diagnostics.CodeAnalysis;
 
 namespace Kantaiko.Properties;
 
+/// <summary>
+/// <inheritdoc cref="IPropertyCollection"/>
+/// </summary>
 public class PropertyCollection : IPropertyCollection
 {
     private Dictionary<Type, object>? _objects;
 
+    /// <summary>
+    /// Creates an empty <see cref="PropertyCollection"/>.
+    /// </summary>
     public PropertyCollection() { }
 
+    /// <summary>
+    /// Creates a <see cref="PropertyCollection"/> with the specified properties.
+    /// </summary>
+    /// <param name="objects">A collection of property instances.</param>
     public PropertyCollection(IEnumerable<object> objects)
     {
-        _objects = objects.ToDictionary(x => x.GetType(), x => x);
+        ArgumentNullException.ThrowIfNull(objects);
+
+        // ReSharper disable once ConditionIsAlwaysTrueOrFalseAccordingToNullableAPIContract
+        _objects = objects.Where(x => x is not null).ToDictionary(x => x.GetType(), x => x);
     }
 
     public IEnumerable<object> Objects => (IEnumerable<object>?) _objects?.Values ?? Array.Empty<object>();
@@ -47,11 +60,11 @@ public class PropertyCollection : IPropertyCollection
         _objects[typeof(T)] = value;
     }
 
-    public bool Remove(Type propertiesType)
+    public bool Remove(Type type)
     {
-        ArgumentNullException.ThrowIfNull(propertiesType);
+        ArgumentNullException.ThrowIfNull(type);
 
-        return _objects?.Remove(propertiesType) ?? false;
+        return _objects?.Remove(type) ?? false;
     }
 
     public void Clear()

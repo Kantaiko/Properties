@@ -3,18 +3,31 @@ using System.Diagnostics.CodeAnalysis;
 
 namespace Kantaiko.Properties.Immutable;
 
+/// <summary>
+/// <inheritdoc cref="IImmutablePropertyCollection"/>
+/// </summary>
 public class ImmutablePropertyCollection : IImmutablePropertyCollection
 {
     private readonly IImmutableDictionary<Type, object>? _objects;
 
+    /// <summary>
+    /// Creates an empty <see cref="ImmutablePropertyCollection"/>.
+    /// </summary>
     public ImmutablePropertyCollection() { }
 
+    /// <summary>
+    /// Creates a new <see cref="ImmutablePropertyCollection"/> with the specified properties.
+    /// </summary>
+    /// <param name="objects">A collection of property instances.</param>
     public ImmutablePropertyCollection(IEnumerable<object> objects)
     {
-        _objects = objects.ToImmutableDictionary(x => x.GetType(), x => x);
+        ArgumentNullException.ThrowIfNull(objects);
+
+        // ReSharper disable once ConditionIsAlwaysTrueOrFalseAccordingToNullableAPIContract
+        _objects = objects.Where(x => x is not null).ToImmutableDictionary(x => x.GetType(), x => x);
     }
 
-    internal ImmutablePropertyCollection(IImmutableDictionary<Type, object> objects)
+    private ImmutablePropertyCollection(IImmutableDictionary<Type, object> objects)
     {
         _objects = objects;
     }
@@ -59,5 +72,11 @@ public class ImmutablePropertyCollection : IImmutablePropertyCollection
         return new ImmutablePropertyCollection(objects);
     }
 
+    /// <summary>
+    /// An empty <see cref="ImmutablePropertyCollection"/>.
+    /// <br/>
+    /// Can be used to create new immutable collections by calling <see cref="Set{T}"/>
+    /// without creating a useless empty collection.
+    /// </summary>
     public static IImmutablePropertyCollection Empty { get; } = new ImmutablePropertyCollection();
 }
