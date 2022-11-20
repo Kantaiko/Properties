@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/saintedlama/versionize) for commit guidelines.
 
+<a name="1.0.0-alpha.2"></a>
+## [1.0.0-alpha.2](https://www.github.com/Kantaiko/Properties/releases/tag/v1.0.0-alpha.2) (2022-11-20)
+
+### Features
+
+* Update to .NET 7 ([374230f](https://www.github.com/Kantaiko/Properties/commit/374230f890e47e1bfd4fbd9203391b408313cada))
+
 <a name="1.0.0-alpha.1"></a>
 ## [1.0.0-alpha.1](https://www.github.com/Kantaiko/Properties/releases/tag/v1.0.0-alpha.1) (2022-9-6)
 
